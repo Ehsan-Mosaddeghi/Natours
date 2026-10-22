@@ -1,6 +1,7 @@
 @use "../abstracts/variables";
 
 .btn {
+  &,
   &:link,
   &:visited {
     position: relative;
@@ -11,6 +12,10 @@
     border-radius: 999px;
     transition: all 0.2s;
     font-size: variables.$default-font-size;
+
+    // Change for the button element
+    border: none;
+    cursor: pointer;
   }
 
   &:hover {
@@ -23,7 +28,8 @@
     }
   }
 
-  &:active {
+  &:active,
+  &:focus {
     transform: translateY(-1px);
     box-shadow: 0 0.5rem 1rem rgba(variables.$color-black, 0.2);
   }
