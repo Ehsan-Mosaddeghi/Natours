@@ -1,4 +1,6 @@
 @use "../abstracts/variables";
+@use "../abstracts/mixins";
+
 .feature-box {
   padding: 2.5rem;
   background-color: rgba(variables.$color-white, 0.8);
@@ -7,6 +9,10 @@
   border-radius: 3px;
   box-shadow: 0 1.5rem 4rem rgba(variables.$color-black, 0.15);
   transition: all 0.2s;
+
+  @include mixins.respond(tab-port) {
+    padding: 2rem;
+  }
 
   &__icon {
     width: 6rem;
